@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import { Inter, Instrument_Serif } from "next/font/google"
+import { Inter, Tinos } from "next/font/google"
 import "./globals.css"
 
 /**
@@ -12,9 +12,9 @@ const sans = Inter({
   variable: "--font-sans",
 })
 
-const serifDisplay = Instrument_Serif({
+const serifDisplay = Tinos({
   subsets: ["latin", "latin-ext"],
-  weight: "400",
+  weight: ["400"],
   display: "swap",
   variable: "--font-serif-display",
 })
