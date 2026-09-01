@@ -16,7 +16,7 @@ type Props = {
 export function HoverWord({ children, href, img }: Props) {
   const [open, setOpen] = useState(false)
 
-  const inner = <span className="relative z-10 text-white">{children}</span>
+  const inner = <span className="relative z-10 font-medium text-white">{children}</span>
 
   return (
     <span
