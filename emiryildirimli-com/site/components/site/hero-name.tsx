@@ -15,7 +15,7 @@ export function HeroName() {
       {heroLines.map((line) => (
         <h1
           key={line}
-          className="font-serif-display text-[4em] font-thin leading-none tracking-[-3px] text-white md:text-[90px] md:tracking-[-4px]"
+          className="font-serif-display text-[4em] font-thin leading-none tracking-[-2px] text-white md:text-[90px] md:tracking-[-3px]"
         >
           {line}
         </h1>
