@@ -1,5 +1,23 @@
 import type { Metadata } from "next"
+import { Inter, Instrument_Serif } from "next/font/google"
 import "./globals.css"
+
+/**
+ * Fontlar build sırasında indirilip kendi sunucumuzdan servis ediliyor.
+ * Böylece her cihazda birebir aynı görünür — fallback'e düşüp kaymaz.
+ */
+const sans = Inter({
+  subsets: ["latin", "latin-ext"],
+  display: "swap",
+  variable: "--font-sans",
+})
+
+const serifDisplay = Instrument_Serif({
+  subsets: ["latin", "latin-ext"],
+  weight: "400",
+  display: "swap",
+  variable: "--font-serif-display",
+})
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://emiryildirimli.com"),
@@ -29,12 +47,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      {/*
-        body: background #030303, 16px / 20px, "PP Neue Montreal"
-        Ticari fontlar (PP Neue Montreal / Tobias Upright) repoda yoksa
-        globals.css içindeki @font-face bloklarını doldur; yoksa fallback devreye girer.
-      */}
+    <html lang="en" className={`${sans.variable} ${serifDisplay.variable}`}>
       <body className="min-h-screen bg-[#030303] font-sans text-base leading-5 text-white/80 antialiased">
         {children}
       </body>
