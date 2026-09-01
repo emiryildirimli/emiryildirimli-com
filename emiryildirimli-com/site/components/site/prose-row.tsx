@@ -2,25 +2,25 @@ import type { Row, Token } from "@/lib/site-content"
 import { HoverWord } from "./hover-word"
 
 /**
- * .paragraph-container — display:flex; flex-wrap:wrap; gap:4px
- * .text-block         — 16px / line-height:1 / weight 300 / letter-spacing:-.01em
- *                       color: rgba(255,255,255,.8)
+ * Metin satırı — normal akan paragraf.
+ * (Önceki flex-wrap yapısı uzun cümlelerde satır aralığını bozuyordu.)
  */
 export function ProseRow({ row }: { row: Row }) {
   return (
-    <div className="flex flex-wrap items-start gap-1 text-left text-base font-light leading-none tracking-[-0.01em] text-white/80">
-      {row.map((token: Token, i) =>
-        typeof token === "string" ? (
-          <span key={i} className="leading-none">
-            {token}
-          </span>
-        ) : (
-          <HoverWord key={i} href={token.href} img={token.img}>
-            {token.text}
-          </HoverWord>
-        )
-      )}
-    </div>
+    <p className="text-left text-base font-light leading-[1.6] tracking-[-0.01em] text-white/80">
+      {row.map((token: Token, i) => (
+        <span key={i}>
+          {typeof token === "string" ? (
+            token
+          ) : (
+            <HoverWord href={token.href} img={token.img}>
+              {token.text}
+            </HoverWord>
+          )}
+          {i < row.length - 1 ? " " : null}
+        </span>
+      ))}
+    </p>
   )
 }
 
