@@ -7,7 +7,7 @@ import { HoverWord } from "./hover-word"
  */
 export function ProseRow({ row }: { row: Row }) {
   return (
-    <p className="text-left text-base font-light leading-[1.6] tracking-[-0.01em] text-white/80">
+    <p className="text-left text-base font-light leading-[1.25] tracking-[-0.01em] text-white/60">
       {row.map((token: Token, i) => (
         <span key={i}>
           {typeof token === "string" ? (
