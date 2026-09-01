@@ -20,15 +20,15 @@ export default function WorkPage() {
     <div className="relative min-h-screen bg-[#030303]">
       <section className="relative z-[2] flex min-h-[90vh] flex-col items-center justify-center bg-[#020202] px-8 pb-[9em] pt-[35px]">
         <div className="flex w-full flex-col items-start justify-center gap-[1.2em] md:w-[32em]">
-          <div className="mb-[50px]">
-            <h1 className="font-serif-display text-[4em] font-thin leading-none tracking-[-2px] text-white md:text-[90px] md:tracking-[-3px]">
+          <div className="mb-[22px]">
+            <h1 className="font-serif-display text-[4.4em] font-thin leading-[0.9] tracking-[-3px] text-white md:text-[100px] md:tracking-[-4px]">
               Work
             </h1>
           </div>
 
-          <p className="text-base font-light leading-[1.6] tracking-[-0.01em] text-white/80">
+          <p className="text-base font-light leading-[1.25] tracking-[-0.01em] text-white/60">
             Everything I&apos;ve put real time into —{" "}
-            <span className="text-white">including the ones that didn&apos;t work.</span>
+            <span className="font-medium text-white">including the ones that didn&apos;t work.</span>
           </p>
 
           <div className="flex w-full flex-col border-t border-[#666]">
@@ -40,12 +40,12 @@ export default function WorkPage() {
                       href={item.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-base font-light text-white hover:underline"
+                      className="text-base font-medium text-white hover:underline"
                     >
                       {item.name}
                     </a>
                   ) : (
-                    <span className="text-base font-light text-white">
+                    <span className="text-base font-medium text-white">
                       {item.name}
                     </span>
                   )}
@@ -59,7 +59,7 @@ export default function WorkPage() {
                     {item.period} · {item.role}
                   </span>
                 </div>
-                <p className="mt-2 max-w-[32em] text-[15px] font-light leading-[1.45] tracking-[-0.01em] text-white/70">
+                <p className="mt-2 max-w-[32em] text-[15px] font-light leading-[1.5] tracking-[-0.01em] text-white/60">
                   {item.note}
                 </p>
               </div>
@@ -70,7 +70,7 @@ export default function WorkPage() {
             <p className="text-[13px] font-light uppercase tracking-[1px] text-white/40">
               Projects
             </p>
-            <p className="mt-2 max-w-[32em] text-[15px] font-light leading-[1.45] tracking-[-0.01em] text-white/70">
+            <p className="mt-2 max-w-[32em] text-[15px] font-light leading-[1.5] tracking-[-0.01em] text-white/60">
               Token launches I've run the Turkish market for — across Golwens, on my
               own, and now through Voyra:
             </p>
@@ -78,13 +78,13 @@ export default function WorkPage() {
               {projects.map((name) => (
                 <span
                   key={name}
-                  className="text-base font-light text-white"
+                  className="text-base font-medium text-white"
                 >
                   {name}
                 </span>
               ))}
             </div>
-            <p className="mt-4 max-w-[32em] text-[15px] font-light leading-[1.45] tracking-[-0.01em] text-white/70">
+            <p className="mt-4 max-w-[32em] text-[15px] font-light leading-[1.5] tracking-[-0.01em] text-white/60">
               Subsquid&apos;s SQD sale was the fastest in CoinList history — $6M in 19
               minutes — and I stayed with the project through everything that came
               after.
