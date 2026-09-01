@@ -35,7 +35,7 @@ export function DockNav() {
               </div>
               <span
                 aria-hidden
-                className="absolute top-full h-2 w-9 -translate-y-full rounded"
+                className="absolute top-full h-2 w-9 -translate-y-full rounded opacity-0 transition-opacity duration-200 group-hover:opacity-100"
                 style={{ backgroundColor: item.indicator }}
               />
             </a>
