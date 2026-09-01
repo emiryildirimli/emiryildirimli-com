@@ -22,7 +22,7 @@ export function CalloutLinks() {
           <a
             key={row.label}
             href={row.href}
-            className="block border-b border-[#666] pl-[2px] pt-[2px] text-base font-light leading-[23px] text-white no-underline transition-colors duration-200 hover:bg-white/[0.04]"
+            className="block border-b border-[#666] pl-[2px] pt-[2px] text-base font-normal leading-[26px] text-white no-underline transition-colors duration-200 hover:bg-white/[0.04]"
           >
             {row.label}
           </a>
