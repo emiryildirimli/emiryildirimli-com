@@ -1,6 +1,6 @@
 import type { Metadata } from "next"
 import Link from "next/link"
-import { workItems } from "@/lib/site-content"
+import { workItems, projects } from "@/lib/site-content"
 import { DockNav } from "@/components/site/dock-nav"
 
 export const metadata: Metadata = {
@@ -10,7 +10,6 @@ export const metadata: Metadata = {
 
 const statusColor: Record<string, string> = {
   Live: "#42b27e",
-  Building: "#1e9bef",
   Ended: "#8a8a8a",
   "On hold": "#c08a3e",
 }
@@ -58,7 +57,7 @@ export default function WorkPage() {
                     {item.status}
                   </span>
                   <span className="text-[11px] font-light tracking-[-0.01em] text-white/40">
-                    {item.role}
+                    {item.period} · {item.role}
                   </span>
                 </div>
                 <p className="mt-2 max-w-[32em] text-[15px] font-light leading-[1.45] tracking-[-0.01em] text-white/70">
@@ -66,6 +65,31 @@ export default function WorkPage() {
                 </p>
               </div>
             ))}
+          </div>
+
+          <div className="w-full pt-2">
+            <p className="text-[13px] font-light uppercase tracking-[1px] text-white/40">
+              Projects
+            </p>
+            <p className="mt-2 max-w-[32em] text-[15px] font-light leading-[1.45] tracking-[-0.01em] text-white/70">
+              Token launches I've run the Turkish market for — across Golwens, on my
+              own, and now through Voyra:
+            </p>
+            <div className="mt-3 flex flex-wrap gap-x-2 gap-y-1">
+              {projects.map((name) => (
+                <span
+                  key={name}
+                  className="text-base font-light tracking-[-0.07em] text-white"
+                >
+                  {name}
+                </span>
+              ))}
+            </div>
+            <p className="mt-4 max-w-[32em] text-[15px] font-light leading-[1.45] tracking-[-0.01em] text-white/70">
+              Subsquid&apos;s SQD sale was the fastest in CoinList history — $6M in 19
+              minutes — and I stayed with the project through everything that came
+              after.
+            </p>
           </div>
 
           <div className="flex w-full flex-col">
