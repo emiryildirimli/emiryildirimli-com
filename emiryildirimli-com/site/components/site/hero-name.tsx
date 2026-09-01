@@ -11,11 +11,11 @@ import { heroLines } from "@/lib/site-content"
  */
 export function HeroName() {
   return (
-    <div className="mb-[50px]">
+    <div className="mb-[22px]">
       {heroLines.map((line) => (
         <h1
           key={line}
-          className="font-serif-display text-[4em] font-thin leading-none tracking-[-2px] text-white md:text-[90px] md:tracking-[-3px]"
+          className="font-serif-display text-[4.4em] font-thin leading-[0.9] tracking-[-3px] text-white md:text-[100px] md:tracking-[-4px]"
         >
           {line}
         </h1>
