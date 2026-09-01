@@ -71,8 +71,8 @@ export const rows: Block[] = [
     "Things I've worked on:",
     { text: "Voyra", href: "https://voyra.io" },
     "(my agency, 2025),",
-    { text: "PowAhoy" },
-    "(Web3 IP, 2024),",
+    { text: "Pow Ahoy" },
+    "(Web3 IP, 2024—),",
     { text: "Golwens" },
     "(crypto marketing agency, 2023–24), and",
     { text: "Finderex" },
@@ -80,13 +80,14 @@ export const rows: Block[] = [
   ],
   [
     "Not everything shipped, and I'd rather say so.",
-    { text: "PowAhoy" },
+    { text: "Pow Ahoy" },
     "— a Web3 IP project built on a",
     { text: "rebellion manifesto" },
-    "— never launched: the market turned before we did. I still think it's the",
+    "— didn't launch when we planned: the market turned before we did. I still think it's the",
     { text: "biggest idea" },
-    "I have, and I'm holding it for the",
-    { text: "right cycle." },
+    "I have, and I'm",
+    { text: "building it" },
+    "for the right cycle.",
   ],
   "divider",
   [
@@ -120,7 +121,6 @@ export const rows: Block[] = [
 export const calloutGroups: { label: string; href: string }[][] = [
   [
     { label: "Work", href: "/work" },
-    { label: "Vlogs", href: "https://youtube.com/@emiryildirimli" },
   ],
   [
     { label: "Email", href: "mailto:emir@emiryildirimli.com" },
@@ -142,7 +142,7 @@ export type WorkItem = {
   href?: string
   period: string
   role: string
-  status: "Live" | "Ended" | "On hold"
+  status: "Live" | "Building" | "Ended" | "On hold"
   note: string
 }
 
@@ -156,11 +156,11 @@ export const workItems: WorkItem[] = [
     note: "My agency. A new-generation crypto agency: AI-driven data on one side, marketing on the other. I started working directly with large projects on my own, then built Voyra around that work — so campaigns run on what the data says, not on vibes.",
   },
   {
-    name: "PowAhoy",
-    period: "2024",
+    name: "Pow Ahoy",
+    period: "2024 — now",
     role: "Co-founder",
-    status: "On hold",
-    note: "A Web3 IP project built on a rebellion manifesto, made when IP plays and tap-to-earn were peaking. 200–300 people put the skull-and-flag on their profile before we shipped a thing. Then the market turned and we held it back. I still think it's the biggest thing I have — it's waiting for the right cycle.",
+    status: "Building",
+    note: "A Web3 IP project built on a rebellion manifesto, made when IP plays and tap-to-earn were peaking. 200–300 people put the skull-and-flag on their profile before we shipped a thing. Then the market turned and we held it back. It's back on the table now — I still think it's the biggest thing I have, and I'm building it for the right cycle.",
   },
   {
     name: "Golwens",
