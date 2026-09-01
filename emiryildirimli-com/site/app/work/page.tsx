@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 
 const statusColor: Record<string, string> = {
   Live: "#42b27e",
+  Building: "#1e9bef",
   Ended: "#8a8a8a",
   "On hold": "#c08a3e",
 }
@@ -20,17 +21,15 @@ export default function WorkPage() {
       <section className="relative z-[2] flex min-h-[90vh] flex-col items-center justify-center bg-[#020202] px-8 pb-[9em] pt-[35px]">
         <div className="flex w-full flex-col items-start justify-center gap-[1.2em] md:w-[32em]">
           <div className="mb-[50px]">
-            <h1 className="font-serif-display text-[4em] font-thin leading-none tracking-[-3px] text-white md:text-[90px] md:tracking-[-4px]">
+            <h1 className="font-serif-display text-[4em] font-thin leading-none tracking-[-2px] text-white md:text-[90px] md:tracking-[-3px]">
               Work
             </h1>
           </div>
 
-          <div className="flex flex-wrap items-start gap-1 text-base font-light leading-none tracking-[-0.01em] text-white/80">
-            <span className="leading-none">Everything I've put real time into —</span>
-            <span className="leading-none tracking-[-0.07em] text-white">
-              including the ones that didn't work.
-            </span>
-          </div>
+          <p className="text-base font-light leading-[1.6] tracking-[-0.01em] text-white/80">
+            Everything I&apos;ve put real time into —{" "}
+            <span className="text-white">including the ones that didn&apos;t work.</span>
+          </p>
 
           <div className="flex w-full flex-col border-t border-[#666]">
             {workItems.map((item) => (
@@ -41,12 +40,12 @@ export default function WorkPage() {
                       href={item.href}
                       target="_blank"
                       rel="noreferrer"
-                      className="text-base font-light tracking-[-0.07em] text-white hover:underline"
+                      className="text-base font-light text-white hover:underline"
                     >
                       {item.name}
                     </a>
                   ) : (
-                    <span className="text-base font-light tracking-[-0.07em] text-white">
+                    <span className="text-base font-light text-white">
                       {item.name}
                     </span>
                   )}
@@ -79,7 +78,7 @@ export default function WorkPage() {
               {projects.map((name) => (
                 <span
                   key={name}
-                  className="text-base font-light tracking-[-0.07em] text-white"
+                  className="text-base font-light text-white"
                 >
                   {name}
                 </span>
