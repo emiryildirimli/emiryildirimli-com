@@ -30,8 +30,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ['"PP Neue Montreal"', "Inter", "Helvetica Neue", "Arial", "sans-serif"],
-        "serif-display": ['"Tobias Upright"', '"Times New Roman"', "Times", "serif"],
+        sans: ["var(--font-sans)", "Inter", "Helvetica Neue", "Arial", "sans-serif"],
+        "serif-display": ["var(--font-serif-display)", '"Times New Roman"', "Times", "serif"],
       },
       fontSize: {
         dock: ["8px", { lineHeight: "1", letterSpacing: "1px" }],
