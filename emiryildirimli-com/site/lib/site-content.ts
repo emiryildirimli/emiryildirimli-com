@@ -45,18 +45,38 @@ export const rows: Block[] = [
     "that actually",
     { text: "moves numbers." },
   ],
+  [
+    "Names you might know:",
+    { text: "Subsquid," },
+    { text: "zkLink," },
+    { text: "BounceBit," },
+    { text: "Bio Protocol," },
+    { text: "Scallop," },
+    { text: "Entangle," },
+    { text: "Borpa." },
+  ],
+  [
+    "Subsquid's",
+    { text: "SQD sale" },
+    "was the",
+    { text: "fastest in CoinList history" },
+    "—",
+    { text: "$6M in 19 minutes." },
+    "I ran the",
+    { text: "Turkish market" },
+    "for it, and stayed with the project through everything that came after.",
+  ],
   "divider",
   [
     "Things I've worked on:",
     { text: "Voyra", href: "https://voyra.io" },
-    "(engagement rewards),",
-    { text: "Finderex" },
-    "(trading app),",
+    "(my agency, 2025),",
     { text: "PowAhoy" },
-    "(Web3 IP), and a",
-    { text: "launchpad" },
-    "I'm building on",
-    { text: "Arc." },
+    "(Web3 IP, 2024),",
+    { text: "Golwens" },
+    "(crypto marketing agency, 2023–24), and",
+    { text: "Finderex" },
+    "(trading app, 2023–24).",
   ],
   [
     "Not everything shipped, and I'd rather say so.",
@@ -120,8 +140,9 @@ export const dockItems = [
 export type WorkItem = {
   name: string
   href?: string
+  period: string
   role: string
-  status: "Live" | "Ended" | "Building" | "On hold"
+  status: "Live" | "Ended" | "On hold"
   note: string
 }
 
@@ -129,26 +150,41 @@ export const workItems: WorkItem[] = [
   {
     name: "Voyra",
     href: "https://voyra.io",
-    role: "Co-founder / growth",
+    period: "2025 — now",
+    role: "Founder",
     status: "Live",
-    note: "Engagement rewards infrastructure — it scores what a community actually does and pays for it. Serious rewards distributed so far. The longer play is turning it into a crypto marketing agency that serves big teams.",
+    note: "My agency. A new-generation crypto agency: AI-driven data on one side, marketing on the other. I started working directly with large projects on my own, then built Voyra around that work — so campaigns run on what the data says, not on vibes.",
   },
   {
-    name: "Arc launchpad",
-    role: "Founder",
-    status: "Building",
-    note: "My own token launchpad on Arc. I looked at building on top of an existing pad and decided to ship our own instead. Reference point: pons on Robinhood Chain.",
+    name: "PowAhoy",
+    period: "2024",
+    role: "Co-founder",
+    status: "On hold",
+    note: "A Web3 IP project built on a rebellion manifesto, made when IP plays and tap-to-earn were peaking. 200–300 people put the skull-and-flag on their profile before we shipped a thing. Then the market turned and we held it back. I still think it's the biggest thing I have — it's waiting for the right cycle.",
+  },
+  {
+    name: "Golwens",
+    period: "2023 — 2024",
+    role: "Growth / marketing",
+    status: "Ended",
+    note: "Crypto marketing agency. I ran growth and launch campaigns for the Turkish market — communities, KOLs, and the noise around a launch. Most of the network I lean on today came out of this room.",
   },
   {
     name: "Finderex",
+    period: "2023 — 2024",
     role: "Design + product — my first job",
     status: "Ended",
     note: "Trading app. I handled everything from the pitch deck to the in-app buttons. The business never found its market and I left after about two years — but it's where I learned how a product actually gets built.",
   },
-  {
-    name: "PowAhoy",
-    role: "Co-founder",
-    status: "On hold",
-    note: "A Web3 IP project launched on a rebellion manifesto, built when IP plays and tap-to-earn were peaking. 200–300 people put the skull-and-flag on their profile before we shipped a thing. Then the market turned and we held it back. I still think it's the biggest thing I have — it's waiting for the right cycle.",
-  },
+]
+
+/** /work sayfasının altındaki proje listesi — roller arası ortak. */
+export const projects = [
+  "Subsquid",
+  "zkLink",
+  "BounceBit",
+  "Bio Protocol",
+  "Scallop (SCA)",
+  "Entangle",
+  "Borpa",
 ]
